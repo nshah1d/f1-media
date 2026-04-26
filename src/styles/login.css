@@ -1,0 +1,46 @@
+.login-root {
+  width: 100vw;
+  height: 100dvh;
+  background-color: #030303;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-root::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+}
+
+.login-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border: none;
+  outline: none;
+  caret-color: transparent;
+  background: transparent;
+  user-select: none;
+}
+
+.login-root.shake {
+  animation: shake 0.35s ease;
+}
+
+.lockout-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--f1-red);
+  box-shadow: 0 0 12px var(--f1-red-dim);
+}
